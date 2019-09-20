@@ -1,5 +1,14 @@
 # barkwire
 
+- Frontend Framework Face Off 2019
+- Barkwire
+- Required stories: 
+  - As a lonely dog, I want to see a list of all of the dogs that
+  are available so that I can see my dating options.
+  - As a lonely dog, I want to be able to link to a specific dog so
+  that I can share my favorite dogs with my friends.
+- Rough time limit: 15 minutes. 
+
 ## Project setup
 ```
 npm install
@@ -10,20 +19,3 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
