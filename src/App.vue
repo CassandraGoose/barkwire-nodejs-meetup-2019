@@ -1,31 +1,116 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <header>
+      <h1>
+        <router-link to="/dogs">BarkWire</router-link>
+      </h1>
+    </header>
+    <main>
+      <router-view />
+    </main>
+    <footer>
+      <small>&copy; Barkwire Inc.</small>
+    </footer>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
+<style>@import url("http://meyerweb.com/eric/tools/css/reset/reset.css");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower%7COpen+Sans");
+
+body {
+  color: #333;
+  background-color: #eee;
+  font-family: "Open Sans";
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+input,
+label {
+  display: block;
+  width: 100%;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+label {
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
+
+input {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+header {
+  background-color: #4db36f;
+  padding: 1rem;
+  box-shadow: 0 1px 1px #999;
+}
+header h1 {
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Indie Flower";
+}
+
+main {
+  padding: 3rem;
+  position: relative;
+  min-height: calc(100vh - 208px);
+}
+main h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  padding: 1rem;
+  background-color: #333;
+  color: #eee;
+}
+
+.dogs {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.dog-listing {
+  max-width: 30rem;
+  margin: 1rem;
+  box-shadow: 2px 2px 2px #999;
+  transition: all 0.2s;
+}
+.dog-listing:hover {
+  transform: scale(1.03);
+}
+.dog-listing h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  background-color: #6f4db3;
+  padding: 1rem;
+  color: #eee;
+}
+.dog-listing figure {
+  margin-right: 1rem;
+  padding: 1rem;
+}
+.dog-listing figure img {
+  max-width: 160px;
+}
+.dog-listing figure figcaption {
+  font-style: italic;
+}
+.dog-listing section {
+  display: flex;
+}
+.dog-listing p {
+  padding: 1rem;
+  line-height: 1.5;
 }
 </style>
